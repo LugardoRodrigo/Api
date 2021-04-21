@@ -15,7 +15,7 @@ class _FormPageTareaState extends State<FormPageTarea> {
   String ciudad;
   String contrasena;
   String sexo;
-  String t = 'todos los campos son necesarios x2';
+  String t = 'Todos los campos son necesarios';
 
   FocusNode nombrefocus;
   FocusNode apellidoFocus;
@@ -30,7 +30,7 @@ class _FormPageTareaState extends State<FormPageTarea> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('formulario Andres Rojo'),
+          title: Text('Rodrigo Lugardo Segundo'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -41,19 +41,19 @@ class _FormPageTareaState extends State<FormPageTarea> {
               children: <Widget>[
                 Container(
                   child: Text(
-                    'Inicia en Animefvl',
+                    'Inicia en Trip Japon',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.blue,
-                      fontSize: 30,
+                      fontSize: 14,
                     ),
                   ),
                 ),
                 TextFormField(
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
-                      hintText: 'ejemplo: Juan',
+                      hintText: 'ejemplo: Karla',
                       labelText: 'nombre',
                       prefixIcon: Icon(Icons.person)),
                   onSaved: (value) {
@@ -73,7 +73,7 @@ class _FormPageTareaState extends State<FormPageTarea> {
                   //  controller: nombreTextController,
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 TextFormField(
                   decoration: InputDecoration(
@@ -99,7 +99,7 @@ class _FormPageTareaState extends State<FormPageTarea> {
                   //  controller: apTextController,
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.number,
@@ -152,12 +152,12 @@ class _FormPageTareaState extends State<FormPageTarea> {
                   textInputAction: TextInputAction.next,
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
-                      hintText: 'ejemplo: juan1234',
+                      hintText: 'ejemplo: mrRaton777',
                       labelText: 'contraseña',
                       prefixIcon: Icon(Icons.content_paste_sharp)),
                   onSaved: (value) {
@@ -177,7 +177,7 @@ class _FormPageTareaState extends State<FormPageTarea> {
                   textInputAction: TextInputAction.next,
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.text,
@@ -200,19 +200,19 @@ class _FormPageTareaState extends State<FormPageTarea> {
                   //  controller: nombreTextController,
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 Container(
                   child: Text(
                     'todos los campos son necesarios',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.red,
+                      color: Colors.redAccent,
                     ),
                   ),
                 ),
                 Container(
-                  width: 300,
+                  width: 150,
                   height: 50,
                   child: RaisedButton(
                     hoverColor: Colors.black,
@@ -222,8 +222,8 @@ class _FormPageTareaState extends State<FormPageTarea> {
                       if (formKey.currentState.validate()) {
                         formKey.currentState.save();
 
-                        if (nombre.compareTo('Andres') == 0 &&
-                            apellido.compareTo('Rojo') == 0) {
+                        if (nombre.compareTo('Rodrigo') == 0 &&
+                            apellido.compareTo('Lugardo') == 0) {
                           Navigator.pushNamed(context, 'formulario_tarea',
                               arguments: Argumentos(
                                   nombre: this.nombre,
@@ -238,7 +238,7 @@ class _FormPageTareaState extends State<FormPageTarea> {
                         }
                       }
                     },
-                    color: Colors.purple,
+                    color: Colors.purpleAccent,
                     textColor: Colors.white,
                     child: Text('Iniciar'),
                   ),
